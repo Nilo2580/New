@@ -66,8 +66,7 @@ async def run_attack_command_async(target_ip, target_port, duration):
 def is_user_admin(user_id, chat_id):
     admin_ids = [7360128563]  # Replace with your Telegram user ID
     return user_id in admin_ids or bot.get_chat_member(chat_id, user_id).status in ['administrator', 'creator']
-    except:
-        return False
+    
 
 @bot.message_handler(commands=['approve', 'disapprove'])
 def approve_or_disapprove_user(message):
